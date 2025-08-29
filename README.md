@@ -17,5 +17,3 @@ Setiap folder di dalam repository ini diberi nama sesuai dengan isi atau tujuan 
 
 Dengan penamaan ini, diharapkan memudahkan siapa pun (termasuk saya sendiri di masa depan) untuk memahami isi repository.
 
-## 🚀 Cara Menggunakan
-1. Clone repository ini:
