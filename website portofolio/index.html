@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | Dimas Arya Arjuna – Full‑Stack, UI/UX, Data</title>
+  <meta name="description"
+    content="Portfolio resmi Dimas Arya Arjuna: Full‑Stack Developer, UI/UX Designer, dan Data/ML. Lihat proyek, skill, pengalaman, dan hubungi langsung." />
+  <link rel="canonical" href="https://contoh-domain.com/" />
+  <meta property="og:title" content="Portfolio | Dimas Arya Arjuna" />
+  <meta property="og:description" content="Full‑Stack • UI/UX • Data/ML – proyek, skill, dan kontak." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=80&auto=format&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><rect width='128' height='128' fill='%235b21b6'/><text x='50%' y='55%' text-anchor='middle' font-size='76' fill='white' font-family='Arial'>D</text></svg>">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dimas Arya Arjuna",
+    "jobTitle": "Full Stack Developer, UI/UX Designer, Data Analyst",
+    "url": "https://contoh-domain.com/",
+    "image": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=600&q=80",
+    "sameAs": [
+      "https://github.com/username",
+      "https://www.linkedin.com/in/username",
+      "https://instagram.com/username",
+      "https://x.com/username"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jakarta",
+      "addressCountry": "ID"
+    }
+  }
+  </script>
+
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp .8s ease-out both
+    }
+
+    .section {
+      scroll-margin-top: 84px
+    }
+
+    .nav-link.active {
+      color: rgb(79, 70, 229);
+      font-weight: 700
+    }
+
+    .project-card {
+      transition: transform .3s ease, box-shadow .3s ease
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px)
+    }
+
+    .skill-badge {
+      transition: transform .2s ease, box-shadow .2s ease
+    }
+
+    .skill-badge:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 18px -10px rgb(0 0 0 / .25)
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased dark:bg-gray-950 dark:text-gray-100">
+  <nav class="fixed inset-x-0 top-0 z-50 bg-white/90 dark:bg-gray-900/80 backdrop-blur shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-x-3 group">
+          <img src="/aset/logoo dimas.png" alt="Logo Dimas Arya Arjuna" class="h-10 w-10 object-contain">
+
+          <span
+            class="font-extrabold text-xl md:text-2xl text-indigo-800 dark:text-indigo-200 group-hover:text-white transition-colors duration-300">
+            Dimas Arya Arjuna
+          </span>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#home" class="nav-link hover:text-indigo-600">Home</a>
+          <a href="#about" class="nav-link hover:text-indigo-600">Tentang</a>
+          <a href="#skills" class="nav-link hover:text-indigo-600">Keahlian</a>
+          <a href="#projects" class="nav-link hover:text-indigo-600">Proyek</a>
+          <a href="#experience" class="nav-link hover:text-indigo-600">Pengalaman</a>
+          <a href="#contact" class="nav-link hover:text-indigo-600">Kontak</a>
+        </div>
+        <div class="flex items-center gap-x-2 md:gap-x-3">
+
+          <button id="theme-toggle" type="button"
+            class="p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            aria-label="Toggle tema gelap atau terang">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden dark:inline" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 dark:hidden" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+
+          <button id="mobile-menu-button" type="button"
+            class="md:hidden p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            aria-label="Buka atau tutup menu navigasi" aria-controls="mobile-menu" aria-expanded="false">
+            <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden pt-4 space-y-2">
+        <a href="#home" class="block px-2 py-2 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/40">Home</a>
+        <a href="#about" class="block px-2 py-2 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/40">Tentang</a>
+        <a href="#skills" class="block px-2 py-2 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/40">Keahlian</a>
+        <a href="#projects" class="block px-2 py-2 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/40">Proyek</a>
+        <a href="#experience"
+          class="block px-2 py-2 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/40">Pengalaman</a>
+        <a href="#contact" class="block px-2 py-2 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/40">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home"
+    class="section min-h-[88vh] flex items-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900 pt-24">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div class="animate-fadeInUp">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Hai, saya <span
+            class="text-indigo-600 dark:text-indigo-400">Dimas Arya Arjuna</span></h1>
+        <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">Full‑Stack Developer · UI/UX Designer · Data/ML</p>
+        <p class="mt-6 text-lg text-gray-700/90 dark:text-gray-300">Membangun produk web yang cepat, aksesibel, dan
+          berbasis data. Saat ini fokus ke aplikasi AI, arsitektur front‑end modern, dan data pipeline ringan.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#contact"
+            class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl shadow">
+            <i class="fa-solid fa-envelope"></i> Hubungi Saya
+          </a>
+          <button id="download-cv"
+            class="inline-flex items-center gap-2 border border-indigo-600 text-indigo-600 dark:text-indigo-400 px-6 py-3 rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-950/40">
+            <i class="fa-solid fa-file-arrow-down"></i> Download CV
+          </button>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <figure
+          class="rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-gray-800 rotate-2 hover:rotate-0 transition-transform">
+          <img loading="lazy" src="/aset/WhatsApp Image 2025-08-21 at 09.52.28_11cc412c.jpg" alt="Potret profesional"
+            class="w-[420px] h-auto object-cover" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-center mb-12">Tentang <span
+          class="text-indigo-600 dark:text-indigo-400">Saya</span></h2>
+      <div class="grid lg:grid-cols-3 gap-10 items-center">
+        <div class="flex justify-center">
+          <div class="relative">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=600&q=80"
+              alt="Foto profil"
+              class="w-64 h-64 rounded-full object-cover shadow-2xl border-4 border-white dark:border-gray-800" />
+            <span class="absolute -bottom-4 -right-4 bg-indigo-600 text-white rounded-full p-4 shadow-lg"><i
+                class="fa-solid fa-user-tie text-2xl"></i></span>
+          </div>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg">
+            <h3 class="text-2xl font-bold mb-4 text-indigo-600 dark:text-indigo-400">Profil Profesional</h3>
+            <p class="text-gray-700 dark:text-gray-300">Lulusan TI dengan fokus pengembangan web, desain produk, dan
+              analisis data. Menyukai arsitektur front‑end berskala, aksesibilitas, dan automasi build. Siap
+              berkolaborasi lintas‑tim dan berbicara dengan bahasa bisnis maupun teknologi.</p>
+            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-700 dark:text-gray-300">
+              <li>Peserta program Asah Machine Learning – Dicoding</li>
+              <li>Project Manager & UI/UX untuk website dojo Shindoka</li>
+              <li>Anggota tim pengabdian masyarakat bidang teknologi</li>
+            </ul>
+            <div class="grid sm:grid-cols-2 gap-6 mt-6">
+              <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-xl">
+                <h4 class="font-bold mb-1 flex items-center gap-2"><i
+                    class="fa-solid fa-user-graduate text-indigo-600 dark:text-indigo-400"></i> Pendidikan</h4>
+                <p class="font-semibold">S1 Teknologi Informasi</p>
+                <p class="text-gray-600 dark:text-gray-400">Universitas Mikroskil (2023–sekarang)</p>
+              </div>
+              <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-xl">
+                <h4 class="font-bold mb-1 flex items-center gap-2"><i
+                    class="fa-solid fa-language text-indigo-600 dark:text-indigo-400"></i> Bahasa</h4>
+                <p>Indonesia (Fasih), English (Intermediate)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-center mb-12">Keahlian & <span
+          class="text-indigo-600 dark:text-indigo-400">Tools</span></h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-gray-950 p-6 rounded-2xl shadow">
+          <h3 class="text-xl font-bold mb-6 text-indigo-600 dark:text-indigo-400 flex items-center gap-3"><i
+              class="fa-solid fa-laptop-code"></i> Pengembangan Web</h3>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-brands fa-html5 text-4xl text-orange-500 mb-1"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-brands fa-css3-alt text-4xl text-blue-500 mb-1"></i>
+              <p>CSS3</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-brands fa-js text-4xl text-yellow-400 mb-1"></i>
+              <p>JavaScript</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-brands fa-react text-4xl text-blue-400 mb-1"></i>
+              <p>React</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-brands fa-node-js text-4xl text-green-600 mb-1"></i>
+              <p>Node.js</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><img
+                src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" alt="Tailwind" class="h-10 mx-auto mb-1">
+              <p>Tailwind</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-gray-950 p-6 rounded-2xl shadow">
+          <h3 class="text-xl font-bold mb-6 text-indigo-600 dark:text-indigo-400 flex items-center gap-3"><i
+              class="fa-solid fa-chart-line"></i> Data & AI</h3>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-brands fa-python text-4xl mb-1"></i>
+              <p>Python</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><img
+                src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau"
+                class="h-10 mx-auto mb-1">
+              <p>Tableau</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-solid fa-database text-4xl mb-1"></i>
+              <p>MySQL</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-solid fa-server text-4xl mb-1"></i>
+              <p>MongoDB</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><img
+                src="/aset/LOGO GOOGLE COLAB.png" alt="Google Colab" class="h-10 mx-auto mb-1">
+              <p>Colab</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-solid fa-brain text-4xl mb-1"></i>
+              <p>Machine Learning</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-gray-950 p-6 rounded-2xl shadow">
+          <h3 class="text-xl font-bold mb-6 text-indigo-600 dark:text-indigo-400 flex items-center gap-3"><i
+              class="fa-solid fa-toolbox"></i> Lainnya</h3>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-brands fa-figma text-4xl mb-1"></i>
+              <p>Figma</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-brands fa-git-alt text-4xl mb-1"></i>
+              <p>Git</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-brands fa-github text-4xl mb-1"></i>
+              <p>GitHub</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-solid fa-file-word text-4xl mb-1"></i>
+              <p>Word</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-solid fa-file-excel text-4xl mb-1"></i>
+              <p>Excel</p>
+            </div>
+            <div class="skill-badge bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-center"><i
+                class="fa-solid fa-file-powerpoint text-4xl mb-1"></i>
+              <p>PowerPoint</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-center mb-6">Proyek <span
+          class="text-indigo-600 dark:text-indigo-400">Terbaru</span></h2>
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        <button class="filter-btn active bg-indigo-600 text-white px-4 py-2 rounded-xl" data-filter="all">Semua</button>
+        <button class="filter-btn px-4 py-2 rounded-xl border" data-filter="web">Web</button>
+        <button class="filter-btn px-4 py-2 rounded-xl border" data-filter="uiux">UI/UX</button>
+        <button class="filter-btn px-4 py-2 rounded-xl border" data-filter="data">Data/ML</button>
+      </div>
+
+      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="project-card group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow"
+          data-cat="web uiux">
+          <figure class="relative h-48 overflow-hidden">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+              alt="Website Dojo Shindoka" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <figcaption
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex items-end text-white text-lg font-bold">
+              Website Dojo Shindoka</figcaption>
+          </figure>
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3 text-xs">
+              <span class="px-2 py-1 rounded-full bg-indigo-100 text-indigo-800">UI/UX</span>
+              <span class="px-2 py-1 rounded-full bg-indigo-100 text-indigo-800">React</span>
+              <span class="px-2 py-1 rounded-full bg-indigo-100 text-indigo-800">MongoDB</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">Situs dojo tradisional dengan manajemen member, jadwal, dan
+              pembayaran online.</p>
+            <div class="mt-4 flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+              <span><i class="fa-regular fa-calendar"></i> Mar 2023 – Sekarang</span>
+              <button class="text-indigo-600 hover:underline open-modal" data-id="p1">Lihat Detail</button>
+            </div>
+          </div>
+        </article>
+        <article class="project-card group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow"
+          data-cat="data web">
+          <figure class="relative h-48 overflow-hidden">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=900&q=80"
+              alt="Sistem Analisis Bisnis" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <figcaption
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex items-end text-white text-lg font-bold">
+              Sistem Analisis Bisnis</figcaption>
+          </figure>
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3 text-xs">
+              <span class="px-2 py-1 rounded-full bg-indigo-100 text-indigo-800">Python</span>
+              <span class="px-2 py-1 rounded-full bg-indigo-100 text-indigo-800">Tableau</span>
+              <span class="px-2 py-1 rounded-full bg-indigo-100 text-indigo-800">ML</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">Analisis tren penjualan & prediksi stok dengan visualisasi
+              interaktif.</p>
+            <div class="mt-4 flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+              <span><i class="fa-regular fa-calendar"></i> Jan – Jun 2023</span>
+              <button class="text-indigo-600 hover:underline open-modal" data-id="p2">Lihat Detail</button>
+            </div>
+          </div>
+        </article>
+        <article class="project-card group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow"
+          data-cat="uiux mobile">
+          <figure class="relative h-48 overflow-hidden">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
+              alt="Aplikasi Pengabdian Masyarakat"
+              class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <figcaption
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex items-end text-white text-lg font-bold">
+              Aplikasi Pengabdian</figcaption>
+          </figure>
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3 text-xs">
+              <span class="px-2 py-1 rounded-full bg-indigo-100 text-indigo-800">UI/UX</span>
+              <span class="px-2 py-1 rounded-full bg-indigo-100 text-indigo-800">React Native</span>
+              <span class="px-2 py-1 rounded-full bg-indigo-100 text-indigo-800">Firebase</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">Aplikasi edukasi, database peserta, dan pelaporan kegiatan.</p>
+            <div class="mt-4 flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+              <span><i class="fa-regular fa-calendar"></i> 2021 – 2022</span>
+              <button class="text-indigo-600 hover:underline open-modal" data-id="p3">Lihat Detail</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="#contact"
+          class="inline-flex items-center gap-2 border border-indigo-600 text-indigo-600 dark:text-indigo-400 px-6 py-3 rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-950/40">
+          <i class="fa-solid fa-folder-open"></i> Minta Demo Proyek
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-center mb-12">Pengalaman <span
+          class="text-indigo-600 dark:text-indigo-400">Profesional</span></h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="relative pl-8 pb-12 border-l-2 border-indigo-200 dark:border-indigo-900">
+          <span
+            class="absolute -left-2 w-4 h-4 bg-indigo-600 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <div class="mb-2"><span
+              class="bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200 px-2 py-1 rounded-full text-xs font-medium">Sekarang</span>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Mar 2023 – Sekarang</p>
+          </div>
+          <h3 class="text-xl font-bold">Project Manager & UI/UX Designer</h3>
+          <p class="text-gray-600 dark:text-gray-300 font-medium">Proyek Hibah Website Dojo Shindoka</p>
+          <ul class="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+            <li>Desain UI/UX dan prototyping</li>
+            <li>Koordinasi dev, desain, stakeholder</li>
+            <li>Manajemen anggaran & timeline</li>
+            <li>QA dan user feedback loop</li>
+          </ul>
+        </div>
+        <div class="relative pl-8 pb-12 border-l-2 border-indigo-200 dark:border-indigo-900">
+          <span
+            class="absolute -left-2 w-4 h-4 bg-indigo-600 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <div class="mb-2"><span
+              class="bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200 px-2 py-1 rounded-full text-xs font-medium">2023</span>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Jan – Des 2023</p>
+          </div>
+          <h3 class="text-xl font-bold">Peserta Program Asah Machine Learning</h3>
+          <p class="text-gray-600 dark:text-gray-300 font-medium">Dicoding Indonesia</p>
+          <ul class="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+            <li>Dasar ML & AI</li>
+            <li>Data wrangling Python</li>
+            <li>Model prediktif</li>
+            <li>Implementasi algoritma</li>
+          </ul>
+        </div>
+        <div class="relative pl-8 pb-12 border-l-2 border-indigo-200 dark:border-indigo-900">
+          <span
+            class="absolute -left-2 w-4 h-4 bg-indigo-600 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <div class="mb-2"><span
+              class="bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200 px-2 py-1 rounded-full text-xs font-medium">2021–2022</span>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Mei 2021 – Des 2022</p>
+          </div>
+          <h3 class="text-xl font-bold">UI/UX Designer & Data Analyst</h3>
+          <p class="text-gray-600 dark:text-gray-300 font-medium">Proyek Pengabdian Masyarakat</p>
+          <ul class="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+            <li>Rancang UI aplikasi edukasi</li>
+            <li>Analisa data evaluasi program</li>
+            <li>Visualisasi & pelaporan</li>
+          </ul>
+        </div>
+        <div class="relative pl-8 border-l-2 border-indigo-200 dark:border-indigo-900">
+          <span
+            class="absolute -left-2 w-4 h-4 bg-indigo-600 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <div class="mb-2"><span
+              class="bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200 px-2 py-1 rounded-full text-xs font-medium">2020</span>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Jun – Des 2020</p>
+          </div>
+          <h3 class="text-xl font-bold">Web Developer Intern</h3>
+          <p class="text-gray-600 dark:text-gray-300 font-medium">Startup Teknologi XYZ</p>
+          <ul class="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+            <li>Komponen UI React</li>
+            <li>Implementasi desain UX</li>
+            <li>Testing & optimasi performa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-center mb-12">Hubungi <span
+          class="text-indigo-600 dark:text-indigo-400">Saya</span></h2>
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-6 text-indigo-600 dark:text-indigo-400 flex items-center gap-3"><i
+              class="fa-solid fa-id-card"></i> Informasi Kontak</h3>
+          <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow">
+            <div class="space-y-5">
+              <div class="flex items-start gap-3"><span class="bg-indigo-100 dark:bg-indigo-900/40 p-3 rounded-full"><i
+                    class="fa-solid fa-envelope text-indigo-600 dark:text-indigo-300"></i></span>
+                <div>
+                  <h4 class="font-semibold">Email</h4>
+                  <p class="text-gray-600 dark:text-gray-300"><a href="mailto:dimas.arya@example.com"
+                      class="hover:underline">dimasryaarjuna06@gmail.com</a></p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3"><span class="bg-indigo-100 dark:bg-indigo-900/40 p-3 rounded-full"><i
+                    class="fa-solid fa-phone text-indigo-600 dark:text-indigo-300"></i></span>
+                <div>
+                  <h4 class="font-semibold">Telepon</h4>
+                  <p class="text-gray-600 dark:text-gray-300">+62 858 3146 1303</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3"><span class="bg-indigo-100 dark:bg-indigo-900/40 p-3 rounded-full"><i
+                    class="fa-solid fa-location-dot text-indigo-600 dark:text-indigo-300"></i></span>
+                <div>
+                  <h4 class="font-semibold">Lokasi</h4>
+                  <p class="text-gray-600 dark:text-gray-300">Medan, Indonesia</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <h4 class="font-semibold mb-3">Temukan saya di</h4>
+              <div class="flex gap-4 text-2xl">
+                <a href="#" aria-label="GitHub" class="text-gray-500 hover:text-indigo-600"><i
+                    class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn" class="text-gray-500 hover:text-indigo-600"><i
+                    class="fa-brands fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram" class="text-gray-500 hover:text-indigo-600"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter/X" class="text-gray-500 hover:text-indigo-600"><i
+                    class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6 text-indigo-600 dark:text-indigo-400 flex items-center gap-3"><i
+              class="fa-solid fa-paper-plane"></i> Kirim Pesan</h3>
+          <form id="contact-form" class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow" novalidate>
+            <div class="mb-4">
+              <label for="name" class="block text-sm font-medium">Nama Lengkap</label>
+              <input id="name" name="name" type="text"
+                class="mt-1 w-full px-4 py-2 rounded-xl border focus:ring-2 focus:ring-indigo-500 bg-white dark:bg-gray-950"
+                placeholder="Nama Anda" required />
+              <p class="mt-1 text-xs text-red-600 hidden" id="err-name">Nama wajib diisi.</p>
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium">Alamat Email</label>
+              <input id="email" name="email" type="email"
+                class="mt-1 w-full px-4 py-2 rounded-xl border focus:ring-2 focus:ring-indigo-500 bg-white dark:bg-gray-950"
+                placeholder="email@example.com" required />
+              <p class="mt-1 text-xs text-red-600 hidden" id="err-email">Masukkan email valid.</p>
+            </div>
+            <div class="mb-4">
+              <label for="subject" class="block text-sm font-medium">Subjek</label>
+              <input id="subject" name="subject" type="text"
+                class="mt-1 w-full px-4 py-2 rounded-xl border focus:ring-2 focus:ring-indigo-500 bg-white dark:bg-gray-950"
+                placeholder="Subjek pesan" required />
+              <p class="mt-1 text-xs text-red-600 hidden" id="err-subject">Subjek wajib diisi.</p>
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block text-sm font-medium">Pesan</label>
+              <textarea id="message" name="message" rows="4"
+                class="mt-1 w-full px-4 py-2 rounded-xl border focus:ring-2 focus:ring-indigo-500 bg-white dark:bg-gray-950"
+                placeholder="Tuliskan pesan Anda..." required></textarea>
+              <p class="mt-1 text-xs text-red-600 hidden" id="err-message">Pesan terlalu pendek.</p>
+            </div>
+            <button type="submit"
+              class="w-full inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl">
+              <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
+            </button>
+            <p id="form-status" class="mt-3 text-sm"></p>
+            <p class="mt-3 text-sm text-gray-500 dark:text-gray-400">*Pesan akan dibuka di aplikasi email default Anda</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 dark:bg-gray-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <a href="#home" class="text-2xl font-extrabold hover:text-indigo-400">Dimas Arya Arjuna</a>
+      <div class="flex justify-center gap-6 mt-4">
+        <a href="#about" class="hover:text-indigo-400">Tentang</a>
+        <a href="#skills" class="hover:text-indigo-400">Keahlian</a>
+        <a href="#projects" class="hover:text-indigo-400">Proyek</a>
+        <a href="#contact" class="hover:text-indigo-400">Kontak</a>
+      </div>
+      <p class="text-gray-400 text-sm mt-6">&copy; 2025 Dimas Arya Arjuna. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="modal" class="fixed inset-0 z-[60] hidden">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative max-w-2xl mx-auto mt-24 bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-gray-800">
+        <h3 id="modal-title" class="text-xl font-bold">Detail Proyek</h3>
+        <button id="modal-close" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"><i
+            class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div id="modal-body" class="p-6 space-y-3 text-gray-700 dark:text-gray-300"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="fixed bottom-6 right-6 hidden bg-gray-900 text-white px-4 py-3 rounded-xl shadow-lg"></div>
+
+  <button id="back-to-top" class="hidden fixed bottom-6 left-6 p-3 rounded-full shadow bg-indigo-600 text-white"><i
+      class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    // Fungsi helper untuk memilih elemen dengan lebih singkat
+    const $ = (selector, context = document) => context.querySelector(selector);
+    const $$ = (selector, context = document) => Array.from(context.querySelectorAll(selector));
+
+    // Menunggu seluruh halaman HTML siap sebelum menjalankan semua skrip
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // --- THEME TOGGLE ---
+      const themeToggleButton = $('#theme-toggle');
+      const themeKey = 'theme';
+
+      const applyTheme = (theme) => {
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+        localStorage.setItem(themeKey, theme);
+      };
+
+      const setInitialTheme = () => {
+        const savedTheme = localStorage.getItem(themeKey);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme) {
+          applyTheme(savedTheme);
+        } else {
+          applyTheme(prefersDark ? 'dark' : 'light');
+        }
+      };
+
+      setInitialTheme();
+
+      if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.contains('dark');
+          applyTheme(isDark ? 'light' : 'dark');
+        });
+      }
+
+
+      // --- MOBILE MENU ---
+      const mobileMenuButton = $('#mobile-menu-button');
+      const mobileMenu = $('#mobile-menu');
+      const iconOpen = $('#icon-open');
+      const iconClose = $('#icon-close');
+      
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          iconOpen.classList.toggle('hidden');
+          iconClose.classList.toggle('hidden');
+        });
+        
+        $$('#mobile-menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          });
+        });
+      }
+
+      // --- ACTIVE NAV HIGHLIGHT (IntersectionObserver) ---
+      const sections = $$('.section');
+      const navLinks = $$('nav .hidden a.nav-link'); // Hanya link di nav desktop
+
+      const observerOptions = { rootMargin: '-40% 0px -55% 0px', threshold: 0 };
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const activeLink = $(`nav .hidden a.nav-link[href="#${entry.target.id}"]`);
+            navLinks.forEach(link => link.classList.remove('active'));
+            if (activeLink) {
+              activeLink.classList.add('active');
+            }
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => section && sectionObserver.observe(section));
+
+      // --- BACK TO TOP BUTTON ---
+      const backToTopButton = $('#back-to-top');
+      if (backToTopButton) {
+        window.addEventListener('scroll', () => {
+          backToTopButton.classList.toggle('hidden', window.scrollY < 600);
+        });
+        backToTopButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      }
+
+      // --- TOAST NOTIFICATION HELPER ---
+      const toastEl = $('#toast');
+      const showToast = (message) => {
+        if (toastEl) {
+          toastEl.textContent = message;
+          toastEl.classList.remove('hidden');
+          setTimeout(() => toastEl.classList.add('hidden'), 2800);
+        }
+      };
+
+      // --- DOWNLOAD CV (jsPDF) ---
+      const downloadCvButton = $('#download-cv');
+      if (downloadCvButton) {
+        downloadCvButton.addEventListener('click', async () => {
+          const { jsPDF } = window.jspdf;
+          const doc = new jsPDF();
+          doc.setFontSize(18); doc.text('Curriculum Vitae', 20, 20);
+          doc.setFontSize(12);
+          const lines = [
+            'Nama: Dimas Arya Arjuna',
+            'Peran: Full‑Stack Developer | UI/UX Designer | Data/ML',
+            'Lokasi: Medan, Indonesia',
+            '',
+            'Ringkasan:',
+            'Membangun aplikasi web modern, aksesibel, dan berbasis data.',
+            '',
+            'Keahlian Utama:',
+            '- React, Node.js, Tailwind, UI/UX',
+            '- Python, SQL, ML, Tableau',
+            '',
+            'Pengalaman Ringkas:',
+            '- PM & UI/UX – Website Dojo Shindoka (2023–sekarang)',
+            '- Analyst & UI/UX – Pengabdian Masyarakat (2021–2022)'
+          ];
+          let y = 30;
+          lines.forEach(line => { doc.text(line, 20, y); y += 8; });
+          doc.save('CV_Dimas_Arya_Arjuna.pdf');
+          showToast('CV berhasil diunduh.');
+        });
+      }
+
+      // --- PROJECT FILTER ---
+      const filterButtons = $$('.filter-btn');
+      const projectCards = $$('#project-grid article');
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => {
+            btn.classList.remove('active', 'bg-indigo-600', 'text-white');
+            btn.classList.add('border');
+          });
+          button.classList.add('active', 'bg-indigo-600', 'text-white');
+          button.classList.remove('border');
+          const category = button.dataset.filter;
+          projectCards.forEach(card => {
+            const show = category === 'all' || card.dataset.cat.includes(category);
+            card.classList.toggle('hidden', !show);
+          });
+        });
+      });
+
+      // --- PROJECT MODAL ---
+      const modal = $('#modal');
+      const modalCloseButton = $('#modal-close');
+      const projectDetails = {
+        p1: { title: 'Website Dojo Shindoka', body: `<p>Platform web untuk manajemen dojo: pendaftaran member, jadwal, pembayaran, dan dashboard admin.</p><ul class='list-disc pl-5 mt-2'><li>Stack: React, Node, MongoDB, Tailwind</li><li>Fitur: Auth JWT, role‑based access, Payment gateway mock</li><li>Peran: PM, UI/UX, Front‑end</li></ul>` },
+        p2: { title: 'Sistem Analisis Bisnis', body: `<p>Analisis penjualan multi‑cabang & forecasting stok.</p><ul class='list-disc pl-5 mt-2'><li>Stack: Python, Pandas, scikit‑learn, Tableau</li><li>Model: ARIMA/Prophet baseline</li><li>Peran: Data wrangling, visualisasi, modeling</li></ul>` },
+        p3: { title: 'Aplikasi Pengabdian', body: `<p>Aplikasi edukasi dan pelaporan kegiatan.</p><ul class='list-disc pl-5 mt-2'><li>Stack: React Native, Firebase</li><li>Fitur: konten offline, pelaporan realtime</li><li>Peran: UI/UX, prototyping</li></ul>` }
+      };
+
+      $$('.open-modal').forEach(button => {
+        button.addEventListener('click', () => {
+          const data = projectDetails[button.dataset.id];
+          if (!data || !modal) return;
+          $('#modal-title', modal).textContent = data.title;
+          $('#modal-body', modal).innerHTML = data.body;
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      const closeModal = () => {
+        if (modal) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      };
+
+      if (modalCloseButton) modalCloseButton.addEventListener('click', closeModal);
+      if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+      // --- CONTACT FORM ---
+      const contactForm = $('#contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const name = $('#name').value.trim();
+          const email = $('#email').value.trim();
+          const subject = $('#subject').value.trim();
+          const message = $('#message').value.trim();
+          const formStatus = $('#form-status');
+
+          const isEmailValid = /.+@.+\..+/.test(email);
+          $('#err-name').classList.toggle('hidden', !!name);
+          $('#err-email').classList.toggle('hidden', isEmailValid);
+          $('#err-subject').classList.toggle('hidden', !!subject);
+          $('#err-message').classList.toggle('hidden', message.length >= 10);
+
+          if (!name || !isEmailValid || !subject || message.length < 10) {
+            formStatus.textContent = 'Periksa kembali input Anda.';
+            formStatus.className = 'mt-3 text-sm text-red-600';
+            return;
+          }
+
+          const mailtoEmail = 'dimasryaarjuna06@gmail.com';
+          const mailtoBody = encodeURIComponent(`Nama: ${name}\nEmail: ${email}\n\n${message}`);
+          const mailtoLink = `mailto:${mailtoEmail}?subject=${encodeURIComponent(subject)}&body=${mailtoBody}`;
+
+          try {
+            await navigator.clipboard.writeText(`Nama: ${name}\nEmail: ${email}\nSubjek: ${subject}\n\n${message}`);
+            showToast('Pesan disalin ke clipboard.');
+          } catch (err) {
+            console.error('Gagal menyalin ke clipboard:', err);
+          }
+
+          formStatus.textContent = 'Membuka aplikasi email Anda…';
+          formStatus.className = 'mt-3 text-sm text-gray-600';
+          window.location.href = mailtoLink;
+          setTimeout(() => {
+            contactForm.reset();
+            formStatus.textContent = '';
+          }, 2000);
+        });
+      }
+
+      // --- REVEAL ON SCROLL ---
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fadeInUp');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      $$('.section').forEach(section => revealObserver.observe(section));
+
+    });
+  </script>
+</body>
+
+</html>
