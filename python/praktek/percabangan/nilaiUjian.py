@@ -16,7 +16,7 @@ def cek_nilai (nama, nilai):
     elif 40 <= nilai <= 54:
         print(f"{nama} Berpredikat D ");
     elif nilai < 40 :
-        print(f"{nama} Berpredikat D ");
+        print(f"{nama} Berpredikat E ");
     else:
         print("Inputan Tidak Sesuai")
         nama, nilai = inputan()
