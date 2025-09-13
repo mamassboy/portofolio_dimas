@@ -62,8 +62,8 @@ while True:
         nama = input("Masukkan Nama: ")
         jurusan = input("Masukkan Jurusan: ")
         jk = input("Masukkan Jenis Kelamin: ")
-        nohp = input("Masukkan No HP: ")
-        mhs = Mahasiswa(nim, nama, jurusan, jk, nohp)
+        stambuk = input("Dari Stambuk mana: ")
+        mhs = Mahasiswa(nim, nama, jurusan, jk, stambuk)
         absen.tambah_daftar_hadir(mhs)
 
     elif pilihan == "2":
