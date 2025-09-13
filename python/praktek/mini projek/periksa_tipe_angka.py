@@ -3,7 +3,7 @@ angka = int(input("Masukkan angka yang ingin Anda periksa: "))
 
 # Cek Positif, Negatif, atau Netral
 if angka > 0:
-    sifat = "Positif"
+    sifat = "Positif" 
 elif angka < 0:
     sifat = "Negatif"
 else:
