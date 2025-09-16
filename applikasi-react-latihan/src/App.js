@@ -1,92 +1,99 @@
-// Mengimpor useState hook dari pustaka react
 import { useState } from "react";
-
-// Mengimpor stylesheet untuk aplikasi ini
 import "./index.css";
 
-// Array multidimensi yang berisi konten untuk setiap tab
-const content = [
-  [
-    "React sangat populer",
-    "React membuat pembuatan UI yang kompleks dan interaktif menjadi sangat mudah",
-    "Sangat kuat dan fleksibel",
-    "React memiliki ekosistem yang sangat aktif dan serbaguna"
-  ],
-  [
-    "Components, JSX & Props",
-    "State",
-    "Hooks (e.g. useEffect())",
-    "Dynamic rendering"
-  ],
-  [
-    "Halaman web resmi (react.dev)",
-    "Next.js (Kerangka kerja Fullstack)",
-    "React Native (membangun aplikasi mobile native dengan React)"
-  ],
-
-  [
-    "Lulus kuliah 3,5 tahun",
-    "Memiliki Penghasilan Tetap 15 juta perbulan",
-    "Lulus S2 di Luar Negri",
-    "Memiliki Dana Darurat Lebih Dari 6 bulan",
-    "Mengumrohkan Orang Tua"
-  ]
-];
-
-// Komponen App yang merupakan komponen utama dari aplikasi ini
 export default function App() {
-  // Mendefinisikan state untuk menyimpan indeks konten yang aktif
-  const [activeContentIndex, setActiveContentIndex] = useState(0);
+  const [tabNames, setTabNames] = useState([
+    "Why React?",
+    "Core Features",
+    "Related Resources",
+    "Dream Future"
+  ]);
 
-  // Mengembalikan JSX yang mendefinisikan struktur UI dari aplikasi
+  const [tabContent, setTabContent] = useState([
+    [
+      "React sangat populer",
+      "React membuat UI kompleks jadi mudah",
+      "Sangat kuat dan fleksibel",
+      "Ekosistem aktif & serbaguna"
+    ],
+    ["Components, JSX & Props", "State", "Hooks", "Dynamic rendering"],
+    ["React.dev", "Next.js", "React Native"],
+    ["Lulus 3,5 tahun", "Punya penghasilan 15 juta", "Umrohkan orang tua"]
+  ]);
+
+  const [activeContentIndex, setActiveContentIndex] = useState(0);
+  const [newTabName, setNewTabName] = useState("");
+  const [newItem, setNewItem] = useState("");
+
+  // ➕ Fungsi menambah tab baru
+  const addTabHandler = () => {
+    if (!newTabName.trim()) return; // kalau kosong, jangan diproses
+    setTabNames([...tabNames, newTabName]); // tambah nama tab
+    setTabContent([...tabContent, []]); // kasih array kosong untuk isi tab
+    setNewTabName(""); // reset input
+  };
+
+  // ➕ Fungsi menambah item ke tab aktif
+  const addItemHandler = () => {
+    if (!newItem.trim()) return; // jangan proses kalau kosong
+    const updatedContent = [...tabContent];
+    updatedContent[activeContentIndex] = [
+      ...updatedContent[activeContentIndex],
+      newItem
+    ];
+    setTabContent(updatedContent);
+    setNewItem("");
+  };
+
   return (
     <>
       <header>
-        {/* Menampilkan logo React */}
         <img src="logo512.png" alt="React logo" />
-
-        {/* Menampilkan judul dan deskripsi */}
         <h1>React.js</h1>
         <p>i.e., using the React library for rendering the UI</p>
       </header>
 
       <div id="tabs">
         <menu>
-          {/* Tombol untuk mengganti konten yang aktif */}
-          <button
-            className={activeContentIndex === 0 ? "active" : ""}
-            onClick={() => setActiveContentIndex(0)}
-          >
-            Why React?
-          </button>
-          <button
-            className={activeContentIndex === 1 ? "active" : ""}
-            onClick={() => setActiveContentIndex(1)}
-          >
-            Core Features
-          </button>
-          <button
-            className={activeContentIndex === 2 ? "active" : ""}
-            onClick={() => setActiveContentIndex(2)}
-          >
-            Related Resources
-          </button>
-          <button
-            className={activeContentIndex === 3 ? "active" : ""}
-            onClick={() => setActiveContentIndex(3)}
-          >
-            Dream Future
-          </button>
+          {tabNames.map((tab, index) => (
+            <button
+              key={tab}
+              className={activeContentIndex === index ? "active" : ""}
+              onClick={() => setActiveContentIndex(index)}
+            >
+              {tab}
+            </button>
+          ))}
         </menu>
 
+        {/* Form tambah tab */}
+        <div style={{ margin: "1rem 0" }}>
+          <input
+            type="text"
+            value={newTabName}
+            onChange={(e) => setNewTabName(e.target.value)}
+            placeholder="Nama tab baru..."
+          />
+          <button onClick={addTabHandler}>Add Tab</button>
+        </div>
+
         <div id="tab-content">
-          {/* Menampilkan konten sesuai dengan indeks yang aktif */}
           <ul>
-            {content[activeContentIndex].map((item) => (
-              // Membuat daftar item untuk setiap item dalam array konten yang aktif
-              <li key={item}>{item}</li>
+            {tabContent[activeContentIndex].map((item, i) => (
+              <li key={i}>{item}</li>
             ))}
           </ul>
+
+          {/* Form Tambah Item */}
+          <div style={{ marginTop: "1rem" }}>
+            <input
+              type="text"
+              value={newItem}
+              onChange={(e) => setNewItem(e.target.value)}
+              placeholder="Tambah item baru..."
+            />
+            <button onClick={addItemHandler}>Add Item</button>
+          </div>
         </div>
       </div>
     </>

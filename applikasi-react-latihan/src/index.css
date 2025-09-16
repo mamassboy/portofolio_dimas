@@ -64,7 +64,14 @@ header p{  margin: 0;
   background-color: #705a0d;
   border-radius: 0 4px 4px 4px;
   padding: 1rem;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
 }
+
+#tab-content.fade {
+  opacity: 0;
+}
+
 
 #tab-content li {
   margin: 0.75rem 0;
