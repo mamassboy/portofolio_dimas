@@ -51,10 +51,6 @@ class Absensi:
 absen = Absensi()
 
 
-
-mhs1 =Mahasiswa("241110348", "Aulia", "Teknik Informatika", "Perempuan", "24")
-mhs1.cetak()
-
 while True:
     print("\nTambah Peserta:")
     print("1. Mahasiswa")
