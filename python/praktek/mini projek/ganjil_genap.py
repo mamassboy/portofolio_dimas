@@ -1,8 +1,17 @@
 angka = int (input("Masukkan Angka Yang Ingin Anda Periksa: "))
 
 if angka == 0:
-    print(f"{angka} bernilai Nol")
+    sifat = "NETRAL"
 elif angka < 0 :
-    print(f"{angka} bernilai Negatif")
+    sifat = "NEGATIF"
 else:
-    print(f"{angka} bernilai Positif")
+    sifat = "POSITIF"
+
+if angka == 0:
+    jenis = "NETRAL"
+elif angka < 0 :
+    jenis = "GANJIL"
+else:
+    jenis = "GENAP"
+
+print(f"angka {angka} yang anda masukkan memiliki sifat {sifat} dan berjenis {jenis}")
